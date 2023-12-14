@@ -17,4 +17,363 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--font-family-one), sans-serif;
+  font-variation-settings: "wght" var(--font-weight-normal);
+  color: var(--themes-main-color);
+  background: var(--background-image);
+  background-size: cover;
+  background-attachment: fixed;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*.....................HEADER........................*/
+
+.header {
+  margin-block-start: 100px;
+  font-family: var(--font-family-two), sans-serif;
+  border: 2px solid var(--themes-main-color);
+  background-color: var(--background-color);
+  display: grid;
+  justify-items: center;
+}
+
+.title {
+  margin: clamp(120px, 2.2em, 136px) auto 20px;
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+}
+
+.subtitle {
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  text-transform: uppercase;
+}
+
+.theme-menu__list {
+  margin-block-start: 24px;
+  margin-block-end: 25px;
+  margin-inline-start: 19px;
+  display: grid;
+  gap: 12px;
+}
+
+.theme-menu__item {
+  font-size: 14px;
+}
+
+.theme-menu__button {
+  background-color: transparent;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  position: relative;
+}
+
+.theme-menu__button:disabled::before {
+  content: "▶";
+  position: absolute;
+  left: -24px;
+}
+
+.theme-menu__button:disabled {
+  opacity: 0.6;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.theme-menu__button:hover {
+  opacity: 0.6;
+  transition: opacity 0.5s ease;
+}
+
+.theme-menu__button:focus {
+  outline: none;
+  opacity: 0.6;
+}
+
+.theme-menu__button:focus-visible {
+  opacity: 0.6;
+  transition: opacity 0.5s ease;
+}
+
+.theme-menu__button:focus-visible::after {
+  inline-size: 87%;
+}
+.theme-menu__button::after {
+  content: "";
+  position: absolute;
+  display: block;
+  block-size: 2px;
+  background-color: var(--themes-main-color);
+  inline-size: 0%;
+  transition: width 0.3s ease;
+}
+
+/*..............................MAIN.......................*/
+
+.content {
+  margin-block-start: 100px;
+  display: grid;
+  gap: 50px;
+}
+
+.post {
+  background-color: var(--background-color);
+  border: 2px solid var(--themes-main-color);
+}
+
+.post-title {
+  padding: 4px 5px 4px 11px;
+  font-size: 18px;
+  font-variation-settings: "wght" var(--font-weight-bold);
+}
+
+.photo {
+  background-size: cover;
+  inline-size: 100%;
+  border-top: 2px solid var(--themes-main-color);
+  border-bottom: 2px solid var(--themes-main-color);
+}
+
+.post-text {
+  padding: 20px 28px 25px 25px;
+  display: grid;
+  gap: 27px;
+}
+
+.text {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.post-like {
+  display: flex;
+  gap: 1px;
+  justify-content: flex-end;
+  margin: 0 25px 20px 0;
+}
+
+.card__icon-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid var(--themes-main-color);
+}
+
+.card__like-button {
+  color: var(--themes-main-color);
+  font-family: var(--font-family-two), sans-serif;
+  font-size: 14px;
+  line-height: 90%;
+  background-color: transparent;
+  block-size: 38px;
+  inline-size: 130px;
+  border: 2px solid var(--themes-main-color);
+}
+
+.card__icon-button .contour {
+  fill: var(--themes-main-color);
+}
+
+.photo-container {
+  position: relative;
+}
+
+.lable {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  font-family: var(--font-family-two);
+  font-size: 14px;
+  text-transform: uppercase;
+  opacity: 0.5;
+  mix-blend-mode: hard-light;
+  text-shadow: -1px 0 var(--background-color), 0 1px var(--background-color),
+    1px 0 var(--background-color), 0 -1px var(--background-color);
+  z-index: 2;
+  color: var(--lable-color);
+}
+
+@supports (
+  (text-stroke: 1px var(--background-color)) or
+    (-webkit-text-stroke: 1px var(--background-color))
+) {
+  .lable {
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--background-color);
+    text-stroke: 1px var(--background-color);
+  }
+}
+
+/*.........FILTERS.........*/
+
+.filter-one {
+  filter: brightness(80%);
+}
+
+.filter-two {
+  filter: sepia(50%);
+}
+
+.filter-three {
+  filter: grayscale(50%);
+}
+
+.filter-four {
+  filter: contrast(180%);
+}
+
+.filter-five {
+  filter: invert(15%);
+}
+
+.filter-six {
+  -webkit-filter: contrast(2) brightness(1.5);
+  filter: contrast(2) brightness(1.5);
+}
+
+.filter-seven {
+  -webkit-filter: grayscale(0.5) opacity(0.8);
+  filter: grayscale(0.5) opacity(0.8);
+}
+
+.filter-eighth {
+  -webkit-filter: contrast(8) brightness(98%) saturate(6) grayscale(30%);
+  filter: contrast(8) brightness(98%) saturate(6) grayscale(30%);
+}
+
+/*.................................FOOTER...........................*/
+
+.footer {
+  margin-block-start: 54px;
+  display: grid;
+  justify-content: center;
+}
+
+.footer-button {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  background-color: var(--background-color);
+  padding: 12px 20px 15px 20px;
+  margin-block-end: 102px;
+}
+
+.footer-icon {
+  inline-size: 28px;
+  color: var(--themes-main-color);
+}
+
+.button-text {
+  line-height: 90%;
+  font-family: var(--font-family-two);
+  font-size: 14px;
+}
+
+/*.................................DIALOG......................*/
+
+.dialog {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  font-family: var(--font-family-two);
+  font-size: 14px;
+  text-transform: uppercase;
+  border: 2px solid var(--themes-main-color);
+  color: var(--themes-main-color);
+  background-color: var(--background-color);
+  transition: opacity 0.3s ease-in-out;
+  inline-size: clamp(341px, 40vw, 357px);
+}
+
+.dialog-floppy {
+  display: grid;
+  grid-template-columns: 39px 1fr;
+  gap: 20px;
+  align-items: center;
+  margin: 32px 32px 30px;
+  line-height: 150%;
+}
+
+.dialog-button {
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 2px solid var(--themes-main-color);
+  padding: 10px 17px;
+  inline-size: 82%;
+  margin: 0 auto 32px;
+}
+.dialog-icon {
+  color: var(--themes-main-color);
+}
+
+dialog::backdrop {
+  background: #000;
+  opacity: 0.75;
+}
+
+/*....................BUTTON..............*/
+
+.card__like-button,
+.footer-button,
+.dialog-button {
+  position: relative;
+}
+
+.card__like-button:focus,
+.footer-button:focus,
+.dialog-button:focus {
+  outline: none;
+  box-shadow: 2px 2px 0px var(--themes-main-color);
+  transition: box-shadow 0.5s ease;
+}
+
+.button {
+  cursor: pointer;
+}
+
+.card__like-button::after,
+.footer-button::after,
+.dialog-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: var(--like-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  inline-size: 100%;
+  mix-blend-mode: difference;
+  transition: 0.5s ease-in-out;
+}
+
+.card__like-button:hover::after,
+.footer-button:hover::after,
+.dialog-button:hover::after {
+  transform: scaleX(1);
+}
+
+/*............................MEDIA...........................*/
+
+@media screen and (min-width: 376px) {
+  .page {
+    inline-size: clamp(375px, calc(48vw + 7px), 696px);
+  }
+
+  .footer-button {
+    display: flex;
+    align-items: center;
+  }
+  .footer-icon {
+    inline-size: 21px;
+  }
 }
