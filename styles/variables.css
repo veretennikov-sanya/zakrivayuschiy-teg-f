@@ -1,21 +1,14 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
 :root {
-  --font-family-one: "Inter";
-  --font-family-two: "PressStart2P";
-  --font-weight-normal: 465;
-  --font-weight-bold: 785;
+  --main-font: "Inter";
+  --additional-font: "PressStart2P";
   --font-weight-normal: 400;
   --font-weight-bold: 700;
   --background-color: white;
-  --background-color: black;
   --themes-main-color: black;
-  --themes-main-color: #00cc14;
-  --lable-color: black;
-  --lable-color: #00cc14;
   --color-heart: #ff0000;
   --like-color: white;
-  --like-color: #00cc14;
   --background-image: repeating-linear-gradient(
       -90deg,
       #d3d3d3 0 2px,
@@ -23,11 +16,4 @@
     ),
     repeating-linear-gradient(#d3d3d3 0 2px, rgb(211 211 211 / 0) 2px 4px),
     linear-gradient(#e7e7e7 0 0.01%, #1a1a1a);
-  --background-image: repeating-linear-gradient(
-      -90deg,
-      #000 0 2px,
-      rgb(0 0 0 / 0) 2px 4px
-    ),
-    repeating-linear-gradient(#000 0 2px, rgb(0 0 0 / 0) 2px 4px),
-    linear-gradient(#007f0c, #004306);
 }

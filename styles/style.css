@@ -17,7 +17,7 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--font-family-one), sans-serif;
+  font-family: var(--main-font), fantasy;
   font-variation-settings: "wght" var(--font-weight-normal);
   color: var(--themes-main-color);
   background: var(--background-image);
@@ -31,19 +31,19 @@
 
 .header {
   margin-block-start: 100px;
-  font-family: var(--font-family-two), sans-serif;
+  font-family: var(--additional-font), fantasy;
   border: 2px solid var(--themes-main-color);
   background-color: var(--background-color);
   display: grid;
   justify-items: center;
 }
 
-.title {
+.header-logo {
   margin: clamp(120px, 2.2em, 136px) auto 20px;
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
 }
 
-.subtitle {
+.title {
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   text-transform: uppercase;
 }
@@ -168,7 +168,7 @@
 
 .card__like-button {
   color: var(--themes-main-color);
-  font-family: var(--font-family-two), sans-serif;
+  font-family: var(--additional-font), fantasy;
   font-size: 14px;
   line-height: 90%;
   background-color: transparent;
@@ -189,7 +189,7 @@
   position: absolute;
   right: 25px;
   top: 25px;
-  font-family: var(--font-family-two);
+  font-family: var(--additional-font), fantasy;
   font-size: 14px;
   text-transform: uppercase;
   opacity: 0.5;
@@ -197,7 +197,7 @@
   text-shadow: -1px 0 var(--background-color), 0 1px var(--background-color),
     1px 0 var(--background-color), 0 -1px var(--background-color);
   z-index: 2;
-  color: var(--lable-color);
+  color: var(--themes-main-color);
 }
 
 @supports (
@@ -213,78 +213,83 @@
 
 /*.........FILTERS.........*/
 
-.filter-one {
+.filter-brightness {
   filter: brightness(80%);
 }
 
-.filter-two {
+.filter-sepia {
   filter: sepia(50%);
 }
 
-.filter-three {
+.filter-grayscale {
   filter: grayscale(50%);
 }
 
-.filter-four {
+.filter-contrast {
   filter: contrast(180%);
 }
 
-.filter-five {
+.filter-invert {
   filter: invert(15%);
 }
 
-.filter-six {
+.filter-contrast__brightness {
   -webkit-filter: contrast(2) brightness(1.5);
   filter: contrast(2) brightness(1.5);
 }
 
-.filter-seven {
+.filter-grayscale__opacity {
   -webkit-filter: grayscale(0.5) opacity(0.8);
   filter: grayscale(0.5) opacity(0.8);
 }
 
-.filter-eighth {
+.filter-multiple {
   -webkit-filter: contrast(8) brightness(98%) saturate(6) grayscale(30%);
   filter: contrast(8) brightness(98%) saturate(6) grayscale(30%);
 }
 
-/*.................................FOOTER...........................*/
+/*.................................SAVE...........................*/
 
-.footer {
+.save {
   margin-block-start: 54px;
   display: grid;
   justify-content: center;
 }
 
-.footer-button {
+.save-button {
   display: grid;
   justify-items: center;
   gap: 8px;
   background-color: var(--background-color);
   padding: 12px 20px 15px 20px;
   margin-block-end: 102px;
+  border: 2px solid var(--themes-main-color);
 }
 
-.footer-icon {
+.save-icon {
   inline-size: 28px;
   color: var(--themes-main-color);
 }
 
 .button-text {
   line-height: 90%;
-  font-family: var(--font-family-two);
+  font-family: var(--additional-font), fantasy;
   font-size: 14px;
 }
 
 /*.................................DIALOG......................*/
 
-.dialog {
+dialog:not([open]) {
+  opacity: 0;
+  pointer-events: none;
   position: fixed;
+}
+
+.dialog {
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 0;
-  font-family: var(--font-family-two);
+  font-family: var(--additional-font), fantasy;
   font-size: 14px;
   text-transform: uppercase;
   border: 2px solid var(--themes-main-color);
@@ -323,13 +328,13 @@ dialog::backdrop {
 /*....................BUTTON..............*/
 
 .card__like-button,
-.footer-button,
+.save-button,
 .dialog-button {
   position: relative;
 }
 
 .card__like-button:focus,
-.footer-button:focus,
+.save-button:focus,
 .dialog-button:focus {
   outline: none;
   box-shadow: 2px 2px 0px var(--themes-main-color);
@@ -341,7 +346,7 @@ dialog::backdrop {
 }
 
 .card__like-button::after,
-.footer-button::after,
+.save-button::after,
 .dialog-button::after {
   content: "";
   position: absolute;
@@ -357,7 +362,7 @@ dialog::backdrop {
 }
 
 .card__like-button:hover::after,
-.footer-button:hover::after,
+.save-button:hover::after,
 .dialog-button:hover::after {
   transform: scaleX(1);
 }
@@ -369,11 +374,11 @@ dialog::backdrop {
     inline-size: clamp(375px, calc(48vw + 7px), 696px);
   }
 
-  .footer-button {
+  .save-button {
     display: flex;
     align-items: center;
   }
-  .footer-icon {
+  .save-icon {
     inline-size: 21px;
   }
 }

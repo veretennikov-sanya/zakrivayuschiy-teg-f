@@ -18,8 +18,8 @@
   </head>
   <body class="page">
     <header class="header">
-      <a class="title">&lt;/HTML&gt;</a>
-      <h1 class="subtitle">закрывающий тег</h1>
+      <a class="header-logo">&lt;/HTML&gt;</a>
+      <h1 class="title">закрывающий тег</h1>
       <nav class="theme-menu header__theme-menu">
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
         <ul class="theme-menu__list">
@@ -54,9 +54,10 @@
         <div class="photo-container">
           <span class="lable">че за тема</span>
           <img
-            class="photo filter-one"
+            class="photo filter-brightness"
             alt="фото кошки"
             src="./images/cat.jpg"
+            loading="lazy"
           />
         </div>
         <div class="post-text">
@@ -72,7 +73,7 @@
           </p>
         </div>
         <div class="post-like">
-          <button class="card__icon-button">
+          <button class="card__icon-button" type="button">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="like-icon"
@@ -118,9 +119,10 @@
         <div class="photo-container">
           <span class="lable">на движениях</span>
           <img
-            class="photo filter-two"
+            class="photo filter-sepia"
             alt="фото мокрой собаки"
             src="./images/ari.jpg"
+            loading="lazy"
           />
         </div>
         <div class="post-text">
@@ -145,7 +147,7 @@
           </p>
         </div>
         <div class="post-like">
-          <button class="card__icon-button">
+          <button class="card__icon-button" type="button">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="like-icon"
@@ -191,9 +193,10 @@
         <div class="photo-container">
           <span class="lable">на харизме</span>
           <img
-            class="photo filter-three"
+            class="photo filter-grayscale"
             alt="фото улыбающейся собаки"
             src="./images/odri.jpg"
+            loading="lazy"
           />
         </div>
         <div class="post-text">
@@ -208,7 +211,7 @@
           </p>
         </div>
         <div class="post-like">
-          <button class="card__icon-button">
+          <button class="card__icon-button" type="button">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="like-icon"
@@ -254,9 +257,10 @@
         <div class="photo-container">
           <span class="lable">полный газ</span>
           <img
-            class="photo filter-four"
+            class="photo filter-contrast"
             alt="фото спящей собаки"
             src="./images/ari2.jpg"
+            loading="lazy"
           />
         </div>
         <div class="post-text">
@@ -272,7 +276,7 @@
           </p>
         </div>
         <div class="post-like">
-          <button class="card__icon-button">
+          <button class="card__icon-button" type="button">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="like-icon"
@@ -318,9 +322,10 @@
         <div class="photo-container">
           <span class="lable">братья</span>
           <img
-            class="photo filter-five"
+            class="photo filter-invert"
             alt="фото собачек"
             src="./images/dogs.jpg"
+            loading="lazy"
           />
         </div>
         <div class="post-text">
@@ -338,7 +343,7 @@
           </p>
         </div>
         <div class="post-like">
-          <button class="card__icon-button">
+          <button class="card__icon-button" type="button">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="like-icon"
@@ -384,9 +389,10 @@
         <div class="photo-container">
           <span class="lable">суета</span>
           <img
-            class="photo filter-six"
+            class="photo filter-contrast__brightness"
             alt="фото собаки"
             src="./images/ari3.jpg"
+            loading="lazy"
           />
         </div>
         <div class="post-text">
@@ -401,7 +407,7 @@
           </p>
         </div>
         <div class="post-like">
-          <button class="card__icon-button">
+          <button class="card__icon-button" type="button">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="like-icon"
@@ -447,9 +453,10 @@
         <div class="photo-container">
           <span class="lable">это путь ниндзя</span>
           <img
-            class="photo filter-seven"
+            class="photo filter-grayscale__opacity"
             alt="фото собаки"
             src="./images/odri2.jpg"
+            loading="lazy"
           />
         </div>
         <div class="post-text">
@@ -466,7 +473,7 @@
           </p>
         </div>
         <div class="post-like">
-          <button class="card__icon-button">
+          <button class="card__icon-button" type="button">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="like-icon"
@@ -512,9 +519,10 @@
         <div class="photo-container">
           <span class="lable">легенда</span>
           <img
-            class="photo filter-eighth"
+            class="photo filter-multiple"
             alt="фото кошки"
             src="./images/iam.jpg"
+            loading="lazy"
           />
         </div>
         <div class="post-text">
@@ -534,7 +542,7 @@
           </p>
         </div>
         <div class="post-like">
-          <button class="card__icon-button button">
+          <button class="card__icon-button button" type="button">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="like-icon"
@@ -575,35 +583,35 @@
           </button>
         </div>
       </article>
-    </main>
-    <footer class="footer">
-      <button
-        onclick="window['dialog-id'].showModal();"
-        aria-controls="dialog-id"
-        class="footer-button button"
-        type="button"
-      >
-        <svg class="footer-icon" viewBox="0 0 28 28">
-          <use href="./svg/floppy.svg#floppy"></use>
-        </svg>
-        <span class="button-text">Сохранить на память</span>
-      </button>
-    </footer>
-    <dialog id="dialog-id" class="dialog">
-      <div class="dialog-floppy">
-        <svg class="dialog-icon" viewBox="0 0 39 39">
-          <use href="./svg/floppy-dialog.svg#floppy-dialog" />
-        </svg>
-        <p class="dialog-text">Вставьте дискету, чтобы продолжить</p>
+      <div class="save">
+        <button
+          onclick="window['dialog-id'].showModal();"
+          aria-controls="dialog-id"
+          class="save-button button"
+          type="button"
+        >
+          <svg class="save-icon" viewBox="0 0 28 28">
+            <use href="./svg/floppy.svg#floppy"></use>
+          </svg>
+          <span class="button-text">Сохранить на память</span>
+        </button>
       </div>
-      <button
-        class="dialog-button button"
-        type="button"
-        onclick="window['dialog-id'].close()"
-      >
-        <span class="ok-text">ok</span>
-      </button>
-    </dialog>
+      <dialog id="dialog-id" class="dialog">
+        <form class="dialog-floppy" method="dialog">
+          <svg class="dialog-icon" viewBox="0 0 39 39">
+            <use href="./svg/floppy-dialog.svg#floppy-dialog" />
+          </svg>
+          <p class="dialog-text">Вставьте дискету, чтобы продолжить</p>
+        </form>
+        <button
+          class="dialog-button button"
+          type="submit"
+          onclick="window['dialog-id'].close()"
+        >
+          <span class="ok-text">ok</span>
+        </button>
+      </dialog>
+    </main>
     <script src="./scripts/like.js"></script>
   </body>
 </html>
