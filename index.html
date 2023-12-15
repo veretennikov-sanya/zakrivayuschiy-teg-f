@@ -597,19 +597,21 @@
         </button>
       </div>
       <dialog id="dialog-id" class="dialog">
-        <form class="dialog-floppy" method="dialog">
+        <div class="dialog-floppy">
           <svg class="dialog-icon" viewBox="0 0 39 39">
             <use href="./svg/floppy-dialog.svg#floppy-dialog" />
           </svg>
           <p class="dialog-text">Вставьте дискету, чтобы продолжить</p>
+        </div>
+        <form class="dialog-form" method="dialog">
+          <button
+            class="dialog-button button"
+            type="submit"
+            onclick="window['dialog-id'].close()"
+          >
+            <span class="ok-text">ok</span>
+          </button>
         </form>
-        <button
-          class="dialog-button button"
-          type="submit"
-          onclick="window['dialog-id'].close()"
-        >
-          <span class="ok-text">ok</span>
-        </button>
       </dialog>
     </main>
     <script src="./scripts/like.js"></script>
